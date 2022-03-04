@@ -1,0 +1,25 @@
+CREATE TABLE Movies (
+    movie_name TEXT NOT NULL,
+    movie_imdb_point INTEGER NOT NULL,
+    release_year INTEGER NOT NULL
+);
+
+add_movie:
+INSERT INTO Movies
+VALUES(?,?,?);
+
+select_all:
+SELECT *
+FROM Movies
+ORDER BY movie_name;
+
+select_by_name:
+SELECT *
+FROM Movies
+WHERE movie_name = ?;
+
+delete_by_name:
+DELETE
+FROM Movies
+WHERE movie_name = ?;
+
